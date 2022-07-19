@@ -3,18 +3,26 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, Theme } from "../theme";
 import useLocalStorage from "use-local-storage";
 
-export const ThemeContext = React.createContext({});
+type Context = {
+	theme: Theme;
+	setTheme: (Theme: Theme) => void;
+};
 
 type Props = {
-	children: JSX.Element;
+	children: React.ReactNode;
 };
+
+export const ThemeContext = React.createContext<Context>({
+	theme: lightTheme,
+	setTheme: () => {},
+});
 
 export const ThemeProvider = (props: Props) => {
 	const userPrefersDarkMode: Boolean = window.matchMedia(
 		"(prefers-color-scheme: dark)"
 	).matches;
 	const userPreferedTheme: Theme = userPrefersDarkMode ? darkTheme : lightTheme;
-	const [theme, setTheme] = useLocalStorage("theme", userPreferedTheme);
+	const [theme, setTheme] = useLocalStorage<Theme>("theme", userPreferedTheme);
 	const root = document.getElementById("root");
 
 	React.useEffect(() => {
