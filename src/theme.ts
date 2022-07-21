@@ -10,6 +10,7 @@ type ColorScale = {
 export interface Theme {
 	name: "light" | "dark";
 	primary: string;
+	primaryLight: string;
 	support: {
 		warning: string;
 	};
@@ -19,6 +20,7 @@ export interface Theme {
 export const lightTheme: Theme = {
 	name: "light",
 	primary: "#0079ff",
+	primaryLight: "#60ABFF",
 	support: {
 		warning: "#f74646",
 	},
@@ -35,6 +37,7 @@ export const lightTheme: Theme = {
 export const darkTheme: Theme = {
 	name: "dark",
 	primary: "#0079ff",
+	primaryLight: "#60ABFF",
 	support: {
 		warning: "#f74646",
 	},

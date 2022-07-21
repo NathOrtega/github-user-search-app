@@ -4,6 +4,8 @@ import Logo from "./components/Logo";
 import ToggleTheme from "./components/ToggleTheme";
 import Card from "./components/Card";
 import styled from "styled-components";
+import Button from "./components/Button";
+import { StyledHeading3 } from "./components/designSystem/Typography";
 
 const MainContainer = styled.div`
 	width: 85%;
@@ -19,6 +21,11 @@ function App() {
 				<Header logo={<Logo />}>
 					<ToggleTheme />
 				</Header>
+				<Button>
+					<StyledHeading3 color="#FFFFFF" fontWeight="bold">
+						Button
+					</StyledHeading3>
+				</Button>
 				<Card />
 			</MainContainer>
 		</ThemeProvider>
