@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { StyledHeading4 } from "./designSystem/Typography";
 
 type ToggleProps = {
 	label: string;
-	iconPath: string;
-	iconAlt: string;
+	icon: React.ReactNode;
 	onToggle: Function;
 };
 
@@ -16,18 +14,28 @@ const StyledButton = styled.button`
 	align-items: center;
 	justify-content: center;
 	background-color: transparent;
-
-	img {
-		margin-left: 10px;
-	}
+	font-size: 13px;
+	color: ${({ theme }) =>
+		theme.name === "light" ? theme.neutrals[600] : theme.neutrals[100]};
 
 	:hover {
 		cursor: pointer;
+		color: ${({ theme }) =>
+			theme.name === "light" ? theme.neutrals[800] : theme.neutrals[200]};
+		path,
+		g {
+			fill: ${({ theme }) =>
+				theme.name === "light" ? theme.neutrals[800] : theme.neutrals[200]};
+		}
+	}
+
+	span {
+		margin-right: 10px;
 	}
 `;
 
 export default function Toggle(props: ToggleProps) {
-	const { label, iconPath, iconAlt, onToggle } = props;
+	const { label, icon: Icon, onToggle } = props;
 
 	const handleOnClick = () => {
 		onToggle();
@@ -35,8 +43,8 @@ export default function Toggle(props: ToggleProps) {
 
 	return (
 		<StyledButton onClick={handleOnClick}>
-			<StyledHeading4>{label}</StyledHeading4>
-			<img src={iconPath} alt={iconAlt} />
+			<span>{label}</span>
+			{Icon}
 		</StyledButton>
 	);
 }

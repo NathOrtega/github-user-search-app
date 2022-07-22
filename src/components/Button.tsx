@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 type ButtonProps = {
+	onClick: () => void;
+	type?: "button" | "submit" | "reset";
 	children: React.ReactNode;
 	style?: React.CSSProperties;
 };
@@ -11,7 +13,7 @@ const StyledButton = styled.button`
 	height: 46px;
 	border-radius: 10px;
 	border: none;
-	color: #ffffff;
+	color: ${({ theme }) => theme.neutrals[100]};
 	background-color: ${({ theme }) => theme.primary};
 
 	:hover {
@@ -21,5 +23,11 @@ const StyledButton = styled.button`
 `;
 
 export default function Button(props: ButtonProps) {
-	return <StyledButton style={props.style}>{props.children}</StyledButton>;
+	const { style, type, onClick, children } = props;
+
+	return (
+		<StyledButton style={style} type={type} onClick={onClick}>
+			{children}
+		</StyledButton>
+	);
 }

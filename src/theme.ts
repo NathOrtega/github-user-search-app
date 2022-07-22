@@ -5,6 +5,9 @@ type ColorScale = {
 	400: string;
 	500: string;
 	600: string;
+	700: string;
+	800: string;
+	900: string;
 };
 
 export interface Theme {
@@ -25,12 +28,15 @@ export const lightTheme: Theme = {
 		warning: "#f74646",
 	},
 	neutrals: {
-		100: "#fefefe",
-		200: "#f6f8ff",
-		300: "#a5b5cd",
-		400: "#697c9a",
-		500: "#4b6a9b",
-		600: "#2b3442",
+		100: "#ffffff",
+		200: "#fefefe",
+		300: "#f6f8ff",
+		400: "#a5b5cd",
+		500: "#697c9a",
+		600: "#4b6a9b",
+		700: "#2b3442",
+		800: "#222731",
+		900: "#000000",
 	},
 };
 
@@ -48,5 +54,8 @@ export const darkTheme: Theme = {
 		400: "#1e2a47",
 		500: "#141d2f",
 		600: "#000000",
+		700: "#000000",
+		800: "#000000",
+		900: "#000000",
 	},
 };

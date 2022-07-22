@@ -11,7 +11,7 @@ export const StyledHeading1 = styled.h1<TypographyProps>`
 	font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "bold")};
 	color: ${({ color, theme }) => {
 		const themeColor: string =
-			theme.name === "light" ? theme.neutrals["600"] : theme.neutrals["100"];
+			theme.name === "light" ? theme.neutrals["800"] : theme.neutrals["100"];
 		return color ? color : themeColor;
 	}};
 `;
@@ -22,7 +22,7 @@ export const StyledHeading2 = styled.h2<TypographyProps>`
 	font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "bold")};
 	color: ${({ color, theme }) => {
 		const themeColor: string =
-			theme.name === "light" ? theme.neutrals["600"] : theme.neutrals["100"];
+			theme.name === "light" ? theme.neutrals["800"] : theme.neutrals["100"];
 		return color ? color : themeColor;
 	}};
 `;
@@ -51,7 +51,7 @@ export const StyledParagraph = styled.p<TypographyProps>`
 	font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "normal")};
 	color: ${({ color, theme }) => {
 		const themeColor: string =
-			theme.name === "light" ? theme.neutrals["600"] : theme.neutrals["100"];
+			theme.name === "light" ? theme.neutrals["800"] : theme.neutrals["100"];
 		return color ? color : themeColor;
 	}};
 `;

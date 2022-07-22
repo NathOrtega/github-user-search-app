@@ -28,9 +28,9 @@ export const ThemeProvider = (props: Props) => {
 	React.useEffect(() => {
 		if (root) {
 			root.style.backgroundColor =
-				theme.name === "light" ? theme.neutrals["200"] : theme.neutrals["500"];
+				theme.name === "light" ? theme.neutrals["300"] : theme.neutrals["500"];
 			document.body.style.backgroundColor =
-				theme.name === "light" ? theme.neutrals["200"] : theme.neutrals["500"];
+				theme.name === "light" ? theme.neutrals["300"] : theme.neutrals["500"];
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [theme.name]);
