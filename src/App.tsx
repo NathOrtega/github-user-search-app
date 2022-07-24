@@ -9,6 +9,7 @@ import Button from "./components/Button";
 import { StyledHeading3 } from "./components/designSystem/Typography";
 import Input from "./components/Input";
 import Icon from "./components/Icon";
+import useFetch from "./hooks/api/useFetch";
 
 const MainContainer = styled.div`
 	width: 85%;
@@ -20,6 +21,7 @@ const MainContainer = styled.div`
 function App() {
 	const { theme } = useTheme();
 	const [inputValue, setInputValue] = React.useState("");
+	const user = useFetch("octocat");
 
 	const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputValue(e.target.value);
@@ -46,7 +48,12 @@ function App() {
 						</StyledHeading3>
 					</Button>
 				</Input>
-				<Card />
+				<Card
+					avatarUrl={user?.avatar_url}
+					name={user?.name}
+					username={`@${user?.login}`}
+					created_at={user?.created_at}
+				/>
 			</MainContainer>
 		</ThemeProvider>
 	);
