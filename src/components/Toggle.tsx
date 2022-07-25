@@ -21,11 +21,11 @@ const StyledButton = styled.button`
 	:hover {
 		cursor: pointer;
 		color: ${({ theme }) =>
-			theme.name === "light" ? theme.neutrals[800] : theme.neutrals[200]};
+			theme.name === "light" ? theme.neutrals[800] : theme.neutrals[300]};
 		path,
 		g {
 			fill: ${({ theme }) =>
-				theme.name === "light" ? theme.neutrals[800] : theme.neutrals[200]};
+				theme.name === "light" ? theme.neutrals[800] : theme.neutrals[300]};
 		}
 	}
 

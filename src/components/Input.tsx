@@ -17,7 +17,7 @@ const StyledInput = styled.form`
 	border-radius: 15px;
 	border: none;
 	background-color: ${({ theme }) =>
-		theme.name === "light" ? theme.neutrals[200] : theme.neutrals[400]};
+		theme.name === "light" ? theme.neutrals[200] : theme.neutrals[500]};
 	margin-bottom: 16px;
 	box-shadow: ${({ theme }) =>
 		theme.name === "light"

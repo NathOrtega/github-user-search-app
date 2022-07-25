@@ -53,6 +53,14 @@ function App() {
 					name={user?.name}
 					username={`@${user?.login}`}
 					created_at={user?.created_at}
+					userBio={user?.bio}
+					public_repos={user?.public_repos}
+					followers={user?.followers}
+					following={user?.following}
+					location={user?.location}
+					blog={user?.blog}
+					twitter_username={user?.twitter_username}
+					company={user?.company}
 				/>
 			</MainContainer>
 		</ThemeProvider>
