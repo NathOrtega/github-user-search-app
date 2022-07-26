@@ -3,19 +3,25 @@ import { ThemeProvider, useTheme } from "./contexts/theme";
 import Header from "./components/Header";
 import Logo from "./components/Logo";
 import ToggleTheme from "./components/ToggleTheme";
-import Card from "./components/Card";
+import UserCard from "./components/UserCard";
 import styled from "styled-components";
 import Button from "./components/Button";
 import { StyledHeading3 } from "./components/designSystem/Typography";
 import Input from "./components/Input";
 import Icon from "./components/Icon";
 import useFetch from "./hooks/api/useFetch";
+import { up } from "styled-breakpoints";
 
 const MainContainer = styled.div`
 	width: 85%;
 	height: 730px;
 	background-color: transparent;
 	margin: 31px auto 79px;
+
+	${up("md")} {
+		width: 580px;
+		margin: 140px auto;
+	}
 `;
 
 function App() {
@@ -48,7 +54,7 @@ function App() {
 						</StyledHeading3>
 					</Button>
 				</Input>
-				<Card
+				<UserCard
 					avatarUrl={user?.avatar_url}
 					name={user?.name}
 					username={`@${user?.login}`}

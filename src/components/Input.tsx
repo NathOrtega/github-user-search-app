@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { up } from "styled-breakpoints";
 
 type InputProps = {
 	icon: React.ReactNode;
@@ -29,6 +30,12 @@ const StyledInput = styled.form`
 	align-items: center;
 	justify-content: flex-start;
 
+	${up("md")} {
+		height: 70px;
+		padding: 9px 10px 9px 32px;
+		margin-bottom: 24px;
+	}
+
 	label {
 		margin-right: 10px;
 		cursor: pointer;
@@ -47,6 +54,10 @@ const StyledInput = styled.form`
 		::placeholder {
 			color: ${({ theme }) =>
 				theme.name === "light" ? theme.neutrals[600] : theme.neutrals[100]};
+		}
+
+		${up("md")} {
+			width: 80%;
 		}
 	}
 `;

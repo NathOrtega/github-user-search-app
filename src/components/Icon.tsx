@@ -1,6 +1,6 @@
 import { useTheme } from "styled-components";
 
-enum IconName {
+export enum IconName {
 	sun = "sun",
 	moon = "moon",
 	company = "company",
