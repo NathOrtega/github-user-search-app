@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { up } from "styled-breakpoints";
 
 type ButtonProps = {
 	onClick: () => void;
@@ -19,6 +20,11 @@ const StyledButton = styled.button`
 	:hover {
 		background-color: ${({ theme }) => theme.primaryLight};
 		cursor: pointer;
+	}
+
+	${up("md")} {
+		width: 106px;
+		height: 50px;
 	}
 `;
 

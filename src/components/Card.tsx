@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { up } from "styled-breakpoints";
 
 type CardProps = {
 	style?: React.CSSProperties;
@@ -22,6 +23,14 @@ const StyledCard = styled.div`
 			? "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
 			: "none"};
 	padding: 32px 24px;
+
+	${up("md")} {
+		padding: 40px;
+	}
+
+	${up("xl")} {
+		padding: 48px;
+	}
 `;
 
 export default function Card({ children }: CardProps) {

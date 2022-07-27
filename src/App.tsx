@@ -22,6 +22,11 @@ const MainContainer = styled.div`
 		width: 580px;
 		margin: 140px auto;
 	}
+
+	${up("xl")} {
+		width: 730px;
+		margin: 50px auto;
+	}
 `;
 
 function App() {
@@ -50,7 +55,7 @@ function App() {
 				>
 					<Button type="submit" onClick={handleOnClick}>
 						<StyledHeading3 color={theme.neutrals[100]} fontWeight="bold">
-							Button
+							Search
 						</StyledHeading3>
 					</Button>
 				</Input>

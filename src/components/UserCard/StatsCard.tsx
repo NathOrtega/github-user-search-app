@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useTheme } from "../../contexts/theme";
 import { StyledHeading4, StyledHeading3 } from "../designSystem/Typography";
 import useGetResponsiveValues from "../utils/useGetResponsiveValue";
+import { up } from "styled-breakpoints";
 
 type StatsProps = {
 	stats: Array<{ title: string; value?: number }>;
@@ -19,6 +20,10 @@ const Stats = styled.div`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+
+	${up("md")} {
+		margin: 30px 0;
+	}
 `;
 
 const Stat = styled.div`

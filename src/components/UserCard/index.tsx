@@ -40,6 +40,9 @@ export default function UserCard({
 	const getResponsiveValue = useGetResponsiveValue();
 	const noBioAvailableColor =
 		theme.name === "light" ? theme.neutrals["400"] : theme.neutrals["200"];
+	const formatedCompanyName = company?.replace("@", "");
+	const twitterLink = `https://twitter.com/${twitter_username}`;
+	const companyGithub = `https://github.com/${formatedCompanyName}`;
 
 	const stats = [
 		{ title: "Repos", value: public_repos },
@@ -48,9 +51,9 @@ export default function UserCard({
 	];
 	const infoList: ListItems = [
 		{ iconName: "location", item: location },
-		{ iconName: "website", item: blog },
-		{ iconName: "twitter", item: twitter_username },
-		{ iconName: "company", item: company },
+		{ iconName: "website", item: blog, url: blog },
+		{ iconName: "twitter", item: twitter_username, url: twitterLink },
+		{ iconName: "company", item: company, url: companyGithub },
 	];
 
 	return (
