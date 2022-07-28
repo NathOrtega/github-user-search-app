@@ -23,7 +23,7 @@ const MainContainer = styled.div`
 		margin: 140px auto;
 	}
 
-	${up("xl")} {
+	${up("lg")} {
 		width: 730px;
 		margin: 50px auto;
 	}
@@ -32,7 +32,7 @@ const MainContainer = styled.div`
 function App() {
 	const { theme } = useTheme();
 	const [inputValue, setInputValue] = React.useState("");
-	const user = useFetch("octocat");
+	const user = useFetch("jeangel");
 
 	const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputValue(e.target.value);

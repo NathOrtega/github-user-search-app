@@ -28,7 +28,7 @@ const StyledCard = styled.div`
 		padding: 40px;
 	}
 
-	${up("xl")} {
+	${up("lg")} {
 		padding: 48px;
 	}
 `;

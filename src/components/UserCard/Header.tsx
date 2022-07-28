@@ -13,11 +13,18 @@ type HeaderProps = {
 };
 
 const Header = styled.div`
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
 	margin-bottom: 30px;
+	position: relative;
+
+	${up("lg")} {
+		height: 50px;
+		margin: 48px 0 0;
+	}
 `;
 
 const ProfilePicture = styled.div<{ avatar?: string }>`
@@ -44,10 +51,26 @@ const HeaderInfo = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
+	position: relative;
 
 	${up("md")} {
 		height: 100px;
 		justify-content: space-around;
+	}
+
+	${up("lg")} {
+		width: 75%;
+		justify-content: flex-start;
+
+		h3 {
+			margin-bottom: 10px;
+		}
+
+		#date {
+			position: absolute;
+			top: 0px;
+			right: 0;
+		}
 	}
 `;
 
@@ -84,6 +107,7 @@ export default function CardHeader({
 					{username}
 				</StyledHeading4>
 				<StyledHeading4
+					id="date"
 					fontSize={getResponsiveValue("13px", "16px", "16px")}
 				>{`Joined ${formatedDate}`}</StyledHeading4>
 			</HeaderInfo>

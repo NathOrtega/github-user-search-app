@@ -67,6 +67,9 @@ export default function UserCard({
 			<StyledHeading4
 				fontSize={getResponsiveValue("13px", "16px", "16px")}
 				color={userBio ? undefined : noBioAvailableColor}
+				style={{
+					marginLeft: getResponsiveValue("0", "0", "157px"),
+				}}
 			>
 				{userBio ? userBio : "This profile has no bio."}
 			</StyledHeading4>

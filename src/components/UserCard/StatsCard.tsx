@@ -24,6 +24,11 @@ const Stats = styled.div`
 	${up("md")} {
 		margin: 30px 0;
 	}
+
+	${up("lg")} {
+		width: 480px;
+		margin: 30px 0 30px 157px;
+	}
 `;
 
 const Stat = styled.div`

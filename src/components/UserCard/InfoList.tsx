@@ -22,6 +22,11 @@ const Container = styled.div`
 		height: 80px;
 		flex-wrap: wrap;
 	}
+
+	${up("lg")} {
+		width: 480px;
+		margin-left: 157px;
+	}
 `;
 
 export default function InfoList({ listItems }: ListProps) {
