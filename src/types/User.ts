@@ -1,5 +1,3 @@
-import React from "react";
-
 type User = {
 	login: string;
 	id: number;
@@ -35,16 +33,4 @@ type User = {
 	updated_at: string;
 };
 
-const useFetch = (username: string) => {
-	const [user, setUser] = React.useState<User | undefined>();
-
-	React.useEffect(() => {
-		fetch(`https://api.github.com/users/${username}`)
-			.then((data) => data.json())
-			.then((data) => setUser(data));
-	}, [username]);
-
-	return user;
-};
-
-export default useFetch;
+export default User;

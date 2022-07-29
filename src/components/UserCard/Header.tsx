@@ -32,6 +32,7 @@ const ProfilePicture = styled.div<{ avatar?: string }>`
 	height: 70px;
 	border: none;
 	border-radius: 50%;
+	background-color: #697c9a;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url(${({ avatar }) => avatar});

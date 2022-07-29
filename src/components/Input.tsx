@@ -76,6 +76,7 @@ export default function Input(props: InputProps) {
 				id={id}
 				onChange={onChange}
 				style={style}
+				autoComplete="off"
 			/>
 			{children && children}
 		</StyledInput>
