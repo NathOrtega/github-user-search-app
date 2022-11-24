@@ -12,4 +12,3 @@
 ## 💻 Demo:
 
 <a href="https://nathortega.github.io/github-user-search-app/" target="_blank">Github user search app</a>
-
