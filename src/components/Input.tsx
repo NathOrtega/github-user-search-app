@@ -67,7 +67,7 @@ export default function Input(props: InputProps) {
 	const { icon, placeholder, value, id, onChange, children, style } = props;
 
 	return (
-		<StyledInput>
+		<StyledInput onSubmit={e => e.preventDefault()}>
 			{icon && <label htmlFor={id}>{icon}</label>}
 			<input
 				type="text"

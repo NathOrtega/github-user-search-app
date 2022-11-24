@@ -42,7 +42,7 @@ function UserSearch() {
 	}, []);
 
 	const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setUsername(e.target.value);
+		setUsername(e.target.value)
 	};
 
 	const handleOnClick = () => {
