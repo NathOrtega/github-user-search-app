@@ -2,6 +2,7 @@
   "name": "github-user-search-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://NathOrtega.github.io/github-user-search-app",
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.4.7",
     "@testing-library/jest-dom": "^5.16.4",
